@@ -1,0 +1,34 @@
+@import "../../../../assets/scss/abstracts/mixins";
+
+.alert {
+  display: block;
+  margin-bottom: 15px;
+  padding: 15px 15px;
+  border-radius: 3px;
+
+  @include respond(600) {
+    padding: 10px 12.5px;
+  }
+
+  @include respond(400) {
+    padding: 7.5px 10px;
+  }
+
+  &.accent,
+  &.primary,
+  &.warn {
+    color: white;
+  }
+
+  &.accent {
+    background-color: #EF5350;
+  }
+
+  &.primary {
+    background-color: #3F51B5;
+  }
+
+  &.warn {
+    background-color: #FBC02D;
+  }
+}

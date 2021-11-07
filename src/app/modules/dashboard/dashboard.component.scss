@@ -1,0 +1,51 @@
+@import "../../../assets/scss/abstracts/mixins";
+
+.container {
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @include respond(600) {
+    width: calc(100% - 15px);
+  }
+
+  @include respond(400) {
+    width: calc(100% - 10px);
+  }
+}
+
+.header {
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
+
+.content {
+  margin-top: 40px;
+  min-height: calc(100vh - 110px);
+}

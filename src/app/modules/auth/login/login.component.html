@@ -1,0 +1,19 @@
+<form [formGroup]="form" class="form" (ngSubmit)="onFormSubmit()">
+
+  <app-alert color="accent" *ngIf="loginFailedError">
+    Invalid credentials
+  </app-alert>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" placeholder="Enter username">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput formControlName="password" placeholder="Enter password">
+  </mat-form-field>
+
+  <div class="form__footer">
+    <button mat-flat-button color="primary" class="form__button">Login</button>
+  </div>
+</form>

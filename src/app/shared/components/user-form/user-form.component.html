@@ -1,0 +1,36 @@
+<mat-card class="mat-elevation-z0">
+  <mat-card-title>{{ data && data.user ? 'Upate User' : 'Create New User' }}</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Enter username">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="Enter first name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Enter last name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" placeholder="Enter password">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="role" placeholder="Select a role">
+          <mat-option *ngFor="let role of getRoles()" [value]="role.value">
+            {{ role.title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="card-footer">
+        <button mat-flat-button (click)="onCancelClick()">Cancel</button>
+        <button mat-flat-button color="primary" (click)="onFormSubmit()">Save</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

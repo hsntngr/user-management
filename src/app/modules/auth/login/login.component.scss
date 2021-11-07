@@ -1,0 +1,13 @@
+.form {
+  &__button {
+    width: 50%;
+    min-width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  &__footer {
+    text-align: center;
+  }
+}
